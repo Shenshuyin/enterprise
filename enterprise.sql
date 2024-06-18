@@ -96,7 +96,7 @@ CREATE TABLE `t_contact` (
 -- ----------------------------
 -- Records of t_contact
 -- ----------------------------
-INSERT INTO `t_contact` VALUES ('5', '<span style=\"white-space:normal;\">公司地址：深圳市南山区XX大厦</span> \r\n<p style=\"white-space:normal;\">\r\n	电话：1355555555\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	联系人：X先生\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	传真：+86 455455554\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	邮箱：695979515@qq.com\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	<br />\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	<br />\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	<iframe src=\"http://localhost:8080/resource/kindeditor/plugins/baidumap/index.html?center=113.94547%2C22.530027&zoom=18&width=558&height=360&markers=113.94547%2C22.530027&markerStyles=l%2CA\" frameborder=\"0\" style=\"width:560px;height:362px;\">\r\n	</iframe>\r\n</p>');
+INSERT INTO `t_contact` VALUES ('6', '<span style=\"white-space:normal;\">公司地址：深圳市南山区XX大厦</span> \r\n<p style=\"white-space:normal;\">\r\n	电话：1355555555\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	联系人：X先生\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	传真：+86 455455554\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	邮箱：695979515@qq.com\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	<br />\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	<br />\r\n</p>\r\n<p style=\"white-space:normal;\">\r\n	<iframe src=\"http://localhost:8080/resource/kindeditor/plugins/baidumap/index.html?center=113.94547%2C22.530027&zoom=18&width=558&height=360&markers=113.94547%2C22.530027&markerStyles=l%2CA\" frameborder=\"0\" style=\"width:560px;height:362px;\">\r\n	</iframe>\r\n</p>');
 
 -- ----------------------------
 -- Table structure for t_friendlinks

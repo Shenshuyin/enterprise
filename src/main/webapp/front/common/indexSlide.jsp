@@ -1,14 +1,36 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/6/16
-  Time: 10:14
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
-<link href="<%=path%>/resource/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
-<script src="<%=path%>/resource/swiper/js/swiper.min.js" type="text/javascript"></script>
+
+<%@ page isELIgnored="false" %>
+<%@page import="com.enterprise.core.SystemManage" %>
+<%@page import="com.enterprise.entity.SystemSetting" %>
+<%@ page import="org.apache.commons.lang.StringUtils" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<%--%>
+<%--    String path = request.getContextPath();--%>
+<%--    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";--%>
+<%--%>--%>
+<%--<head>--%>
+<%--    <link href="<%=path%>/resource/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>--%>
+<%--    <script src="<%=path%>/resource/swiper/js/swiper.min.js" type="text/javascript"></script>--%>
+<%--    <base href="<%=basePath%>">--%>
+<%--</head>--%>
+<body>
+<%--<%@include file="/front/common/common.jsp" %>--%>
+<%--<%@include file="./common.jsp" %>--%>
+<%--<%--%>
+<%--    String path = request.getContextPath();--%>
+<%--    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";--%>
+<%--%>--%>
+<%--<% String path = "http://localhost:8080/enterprise_war_exploded/"; %>--%>
+<%--以上都是会直接导致index页面404，不知道为什么？--%>
+
+
+<%--<link href="/resource/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>--%>
+<link href="<%=request.getContextPath()%>/resource/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+<%--<script src="/resource/swiper/js/swiper.min.js" type="text/javascript"></script>--%>
+<script src="<%=request.getContextPath()%>/resource/swiper/js/swiper.min.js" type="text/javascript"></script>
 <style>
     #index-banner {
         position: relative;
@@ -43,7 +65,8 @@
     .swiper-button-prev {
         width: 32px;
         height: 40px;
-        background: url(./resource/images/slider-arrow.png) -110px 5px no-repeat;
+        /*background: url(./resource/images/slider-arrow.png) -110px 5px no-repeat;*/
+        background: url(<%=request.getContextPath()%>/resource/images/slider-arrow.png) -110px 5px no-repeat;
         filter: alpha(opacity=50);
         opacity: 0.7;
         display: inline-block;
@@ -51,7 +74,8 @@
     .swiper-button-next {
         width: 32px;
         height: 40px;
-        background: url(./resource/images/slider-arrow.png) -55px 5px no-repeat;
+        /*background: url(./resource/images/slider-arrow.png) -55px 5px no-repeat;*/
+        background: url(<%=request.getContextPath()%>/resource/images/slider-arrow.png) -55px 5px no-repeat;
         filter: alpha(opacity=50);
         opacity: 0.7;
         display: inline-block;
@@ -66,7 +90,7 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <c:forEach var="item" items="<%=SystemManage.getInstance().getIndexImgs()%>">
-            <div class="swiper-slide"  style="background-image: url(<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/${item.pictureUrl});"></div>
+            <div class="swiper-slide"  style="background-image: url(<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/<%=request.getContextPath()%>/${item.pictureUrl});"></div>
         </c:forEach>
     </div>
     <!-- Add Pagination -->
@@ -92,5 +116,5 @@
     });
 
 </script>
-
+</body>
 
