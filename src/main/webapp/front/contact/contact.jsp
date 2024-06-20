@@ -28,7 +28,6 @@
         </div>
         <div style="overflow: hidden;">
             <div class="article_content">
-
                     <c:forEach var="item" items="<%=SystemManage.getInstance().getContact()%>">
                         ${item.contentHtml}
                     </c:forEach>

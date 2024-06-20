@@ -7,6 +7,8 @@
 --%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
+
+<%--<%@include file="/front/common/common.jsp" %>--%>
 <style>
 
     .nav{
@@ -39,32 +41,33 @@
 <div style="width:1100px;height: 107px;margin: 0 auto;">
     <div style="width: 201px;height: 107px;float: left;">
         <a href="index">
-        <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %><%=SystemManage.getInstance().getSystemSetting().getLogo() %>"
-             width="201" height="107"/>
+<%--        <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %><%=SystemManage.getInstance().getSystemSetting().getLogo() %>"--%>
+<%--             width="201" height="107"/>--%>
+            <img src="<%=request.getContextPath()%>/attached/image/logo.jpg" width="107" height="107"/>
             </a>
     </div>
     <div style="width: 768px;height: 107px;float: right;overflow: hidden">
         <ul class="nav">
             <li>
-                <a href="<%=path%>/index">首 页</a>
+                <a href="<%=request.getContextPath()%>/index">首 页</a>
             </li>
             <li>
-                <a href="<%=path%>/about">关于我们</a>
+                <a href="<%=request.getContextPath()%>/about">关于我们</a>
             </li>
             <li>
-                <a href="<%=path%>/service">服务领域</a>
+                <a href="<%=request.getContextPath()%>/service">服务领域</a>
             </li>
             <li>
-                <a href="<%=path%>/article">新闻动态</a>
+                <a href="<%=request.getContextPath()%>/article">新闻动态</a>
             </li>
             <li>
-                <a href="<%=path%>/recruitment">诚聘英才</a>
+                <a href="<%=request.getContextPath()%>/recruitment">诚聘英才</a>
             </li>
             <li>
-                <a href="<%=path%>/message">在线留言</a>
+                <a href="<%=request.getContextPath()%>/message">在线留言</a>
             </li>
             <li>
-                <a href="<%=path%>/contact">联系我们</a>
+                <a href="<%=request.getContextPath()%>/contact">联系我们</a>
             </li>
         </ul>
     </div>
